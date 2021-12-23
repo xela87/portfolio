@@ -1,0 +1,56 @@
+h2 {
+    font-family: "NicoMoji-Regular", serif;
+    font-size: 3em;
+}
+.menu {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.menu.active {
+    opacity: 1;
+}
+
+.blur {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+}
+
+.menuContent {
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(102,103,171,0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 12px 40px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "NicoMoji-Regular", serif;
+    color: black;
+    font-size: 28px;
+}
+
+li:hover {
+    text-shadow: 2px 2px 25px aqua;
+    filter: drop-shadow(2px 2px 25px aqua);
+}
+
+@media screen and (max-width: 768px) {
+    .menuContent {
+        width: 100vw;
+    }
+    .blur {
+        backdrop-filter: none;
+    }
+}

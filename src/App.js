@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRouter";
+import style from './styles/app.module.css'
+import Menu from "./components/Menu";
+import menu from "./icons/menu.png";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [menuActive, setMenuActive] = useState(false)
+    return (
+        <BrowserRouter>
+            <section className={style.container}>
+                <nav className={style.navBtn} onClick={() => setMenuActive(!menuActive)}>
+                    <img src={menu} alt=""/>
+                </nav>
+                <Menu active={menuActive} setActive={setMenuActive}/>
+                <main className={style.content}>
+                    <AppRouter/>
+                </main>
+            </section>
+        </BrowserRouter>
+    );
+};
 
 export default App;

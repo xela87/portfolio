@@ -1,0 +1,43 @@
+.container {
+    font-family: "NicoMoji-Regular", serif;
+    font-size: 3rem;
+    display: flex;
+    padding: 3%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill_container {
+    line-height: 1.5;
+    width: 90%;
+    background-color: rgba(102,103,171,0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2%;
+}
+
+.skill_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    filter: grayscale(50%);
+    transition: 1.5s;
+    cursor: pointer;
+}
+.skill_item:hover {
+    filter: grayscale(0) drop-shadow(2px 2px 15px black);
+    transform: scale(1.2);
+}
+
+.skill_item_title {
+
+}
+.skill_item_img {
+    height: 200px;
+}
